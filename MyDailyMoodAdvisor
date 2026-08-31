@@ -1,0 +1,57 @@
+#=====================
+#MY DAILY MOOD ADVISOR
+#=====================
+
+#Part 1 - User input
+
+name = input("Please enter your name: ")
+mood = input("How are you feeling today?:\n Happy\nSad\nTired\nStressed\nExcited")
+energy = int(input("What level of energy do you have today from 1 - 10?:"))
+
+#Part 2 - The if statement
+
+if energy <= 4:
+    print("Looks like you don't have much energy today.Take some rest and work with short breaks.")
+
+#Part 3 - If else statement
+
+if energy >= 5:
+    print("Looks like you have sufficient energy to be active and do something creative!")
+else:
+    print("Hmmmm......... Looks like you haven't listed a number between one and ten.Do you want to try again?")
+
+#Part 4 - if - elif - else statements
+
+if mood == "Happy":
+    advice = "Keep being happy and do something creative with your happiness!"
+elif mood == "Sad":
+    advice = "Talk to somebody or do something to cheer you up."
+elif mood == "Tired":
+    advice = "Eat or drink something and rest."
+elif mood == "Stressed":
+    advice = "Take a break and reflect on what is wrong quietly by yourself."
+elif mood == "Excited":
+    advice = "Use your excitement to be productive! Or do something that will help you calm down."
+else:
+    advice = "Even if you are feeling something different today.It's okay.Relax and take care of yourself."
+
+#Part 5 - Datetime module
+
+import datetime
+
+today = datetime.datetime.now
+
+
+#===========
+#FINAL OUTPUT
+#===========
+
+print("\n=========================")
+print("DAILY MOOD ADVISOR REPORT")
+print("\n=========================")
+print("Name: ",name)
+print("Mood: ",mood)
+print("Energy Level: ",energy)
+print("Date and Time of Report: ",today)
+print("Advice: ",advice)
+print("\n==============================================================================")
